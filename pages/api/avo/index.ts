@@ -8,10 +8,10 @@ const allAvos = async (req: NextApiRequest, res: NextApiResponse) => {
 
     const db = new DB();
     const allEntries = await db.getAll();
-    const lenght = allEntries.length;
+    const length = allEntries.length;
 
     res.status(200).json({
-      lenght,
+      length,
       data: allEntries,
     });
   } catch (e) {

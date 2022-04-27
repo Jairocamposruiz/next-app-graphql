@@ -13,7 +13,7 @@
       ],
       "@store/*": [
         "store/*"
-      ]
+      ],
     },
     "target": "es6",
     "lib": [
