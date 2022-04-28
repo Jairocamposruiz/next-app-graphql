@@ -1,7 +1,12 @@
-import { AppProps } from 'next/app'
+import { AppProps, NextWebVitalsMetric } from 'next/app';
 
-import '../styles/global.css'
-import CartProvider from '@store/Cart'
+import '../styles/global.css';
+import CartProvider from '@store/Cart';
+
+export const reportWebVitals = (metric: NextWebVitalsMetric) => {
+  console.log(metric);
+  //analytics - calibre
+};
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   // Aditional props
@@ -9,9 +14,9 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
   // Manejar errores - componentDidCatch
   return (
     <CartProvider>
-      <Component {...pageProps} />
+      <Component { ...pageProps } />
     </CartProvider>
-  )
-}
+  );
+};
 
-export default MyApp
+export default MyApp;
