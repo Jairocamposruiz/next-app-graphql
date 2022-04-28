@@ -1,11 +1,11 @@
 import { ProductSummary } from '@components/Cards/ProductSummary';
 import { GetStaticPaths, GetStaticProps } from 'next';
-import fetch from 'isomorphic-unfetch';
 
 import { Layout } from '@components/Layout/Layout';
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const response = await fetch('http://localhost:3000/api/avo');
+  const url = process.env.HOST;
+  const response = await fetch(`${url}/api/avo`);
   const { data }: TAPIAvoResponse = await response.json();
 
   const paths = data.map(({ id }) => ({ params: { id } }));
