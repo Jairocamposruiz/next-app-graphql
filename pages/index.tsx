@@ -7,7 +7,6 @@ import { ListProductCard } from '@components/ListCards/ListProductCard';
 
 export const getStaticProps: GetStaticProps = async () => {
   const response = await fetch('http://localhost:3000/api/avo');
-  console.log(response);
   const { data: productList }: TAPIAvoResponse = await response.json();
 
   return {

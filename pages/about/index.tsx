@@ -71,7 +71,7 @@ const About = () => {
         >Taste of Home</a>
       </p>
 
-      <div className={`mt-8 w-full grid grid-cols-2 max-w-5xl gap-10`}>
+      <div className={`mt-8 w-full grid grid-cols-1 md:grid-cols-2 max-w-5xl gap-10`}>
         {
           facts.map((fact, index) => (
             <div

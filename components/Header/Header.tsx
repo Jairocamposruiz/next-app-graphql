@@ -23,11 +23,11 @@ export const Header = () => {
       {
         (isAlive)
           ? <Avocado
-              size={'80px'}
-              className={`transition duration-500 active:scale-y-75 ease-in-out`}
+              size={'100px'}
+              className={`hover:animate-wiggle active:animate-bounce-slow cursor-pointer`}
               onClick={onClick}
           />
-          : <DieAvocado size={'80px'} />
+          : <DieAvocado size={'100px'} />
       }
       <h1
         className={`text-5xl font-semibold`}

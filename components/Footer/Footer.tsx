@@ -5,11 +5,11 @@ export const Footer = () => {
     <footer
       className={`border-t-2 border-gray-200 py-8 flex flex-col items-center justify-center`}
     >
-      <div className={`grid grid-cols-3 w-full max-w-5xl`}>
+      <div className={`grid grid-cols-1 md:grid-cols-3 px-4 w-full max-w-5xl`}>
         <div>
           <p className={`font-bold mb-2`}>About</p>
           <Link
-            href={`http://localhost:3000/about`}
+            href={`/about`}
           >
             <a
               className={`text-blue-500`}
@@ -19,7 +19,7 @@ export const Footer = () => {
         <div>
           <p className={`font-bold mb-2`}>Services</p>
           <Link
-            href={`http://localhost:3000`}
+            href={`/`}
           >
             <a
               className={`text-blue-500`}
