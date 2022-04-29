@@ -1,0 +1,39 @@
+{
+  "private": false,
+  "name": "app-fullstack-graphql",
+  "version": "1.0.0",
+  "description": "App fullstack graphql con un backend con Apollo Server y un frontend con NextJS",
+  "workspaces": [
+    "api",
+    "client",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "npm workspaces run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jairocamposruiz/next-app-graphql.git"
+  },
+  "keywords": [],
+  "author": "Jairo Campos Ruiz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jairocamposruiz/next-app-graphql/issues"
+  },
+  "homepage": "https://github.com/Jairocamposruiz/next-app-graphql#readme",
+  "prettier": {
+    "trailingComma": "es5",
+    "tabWidth": 2,
+    "semi": false,
+    "singleQuote": true
+  },
+  "dependencies": {
+    "eslint": "^8.14.0",
+    "prettier": "^2.6.2",
+    "typescript": "^4.6.3"
+  },
+  "engines": {
+    "node": "16.x"
+  }
+}
