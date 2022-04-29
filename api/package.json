@@ -4,7 +4,7 @@
   "description": "Backend GraphQL API",
   "main": "index.js",
   "scripts": {
-
+    "dev": "nodemon src/index.ts"
   },
   "keywords": [],
   "author": "Jairo Campos Ruiz",
