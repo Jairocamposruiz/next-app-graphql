@@ -1,25 +1,13 @@
 import { ApolloServer } from 'apollo-server';
+import { join } from 'path';
+import { readFileSync } from 'fs';
+import resolvers from './resolvers';
 
-//1 Query
-const typeDefs = `
-  type Query {
-    info: String
-  }
-`;
+const typeDefs = readFileSync(join(__dirname, 'schema.graphql'), 'utf8');
 
-//2 Resolvers
-const resolvers = {
-  Query: {
-    info: () => `This is the API of Jairo GraphQL`,
-  },
-};
-
-//3 Iniciar servidor
 const server = new ApolloServer({
   typeDefs,
   resolvers,
 });
 
-server.listen().then(({ url }) => {
-  console.log(`Server ready at ${ url }`);
-});
+server.listen().then(({ url }) => console.log(`Server is running on ${ url }`));
